@@ -1,0 +1,17 @@
+[channels]
+homelab = [
+    "UCR-DXc1voovS8nhAvccRZhg",
+    "UCZNhwA1B5YqiY1nLzmM0ZRg",
+    "UCOk-gHyjcWZNj3Br4oxwh0A",
+]
+tehc = [
+    "UC5--wS0Ljbin1TjWQX6eafA",
+    "UCWQaM7SpSECp9FELz-cHzuQ",
+    "UCbRP3c757lWg9M-U7TyEkXA",
+]
+fun = ["UCY1kMZp36IQSyNx_9h4mpCg", "UCrPseYLGpNygVi34QpGNqpA"]
+
+# [settings]
+# show_thumbnails = true
+# include_shorts = true
+# enable_ntfy = false

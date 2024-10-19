@@ -41,7 +41,7 @@
 
         craneLib = (crane.mkLib pkgs).overrideToolchain rustStable;
 
-        custom-package = craneLib.buildPackage {
+        tubeman = craneLib.buildPackage {
           src = craneLib.cleanCargoSource (craneLib.path ./.);
           buildInputs = [ ];
           nativeBuildInputs = [ ];
@@ -50,12 +50,12 @@
       in
       {
         checks = {
-          inherit custom-package;
+          inherit tubeman;
         };
 
-        packages.default = custom-package;
+        packages.default = tubeman;
 
-        apps.default = flake-utils.lib.mkApp { drv = custom-package; };
+        apps.default = flake-utils.lib.mkApp { drv = tubeman; };
 
         devShells.default = pkgs.devshell.mkShell {
           env = [
@@ -66,9 +66,7 @@
           ];
 
           packages = with pkgs; [
-            gcc
             just
-            libressl
             rustStable
           ];
         };
